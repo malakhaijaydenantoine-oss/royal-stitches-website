@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Stitches by KingsKrochet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+    <div class="ribbon">
+        <h1>👑 Royal Stitches by KingsKrochet</h1>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <h2>Handcrafted Plushies Fit for Royalty</h2>
+        <p>Unique, handmade crochet plushies designed with love and personality.</p>
+        <button onclick="scrollToProducts()">Shop Now</button>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+        <h2>Our Collection</h2>
+        <div class="product-grid">
+
+            <div class="product">
+                <img src="images/strawberry-cow.jpg" alt="Strawberry Cow Plushie">
+                <h3>Strawberry Cow</h3>
+                <p>£25</p>
+                <button onclick="contactOrder('Strawberry Cow')">Contact to Order</button>
+            </div>
+
+            <div class="product">
+                <img src="images/cookies-icecream-cow.jpg" alt="Cookies and Ice Cream Cow Plushie">
+                <h3>Cookies & Ice Cream Cow</h3>
+                <p>£30 (Half Finished)</p>
+                <button onclick="contactOrder('Cookies & Ice Cream Cow')">Contact to Order</button>
+            </div>
+
+            <div class="product">
+                <img src="images/bunny-bee.jpg" alt="Bunny in Bee Outfit Plushie">
+                <h3>Bunny in Bee Outfit</h3>
+                <p>£28 – Removable Clothes, Customizable</p>
+                <button onclick="contactOrder('Bunny in Bee Outfit')">Contact to Order</button>
+            </div>
+
+            <div class="product">
+                <img src="images/mushroom-boi.jpg" alt="Chunky Grey and Blue Mushroom Plushie">
+                <h3>Chunky Mushroom Boi</h3>
+                <p>£32</p>
+                <button onclick="contactOrder('Chunky Mushroom Boi')">Contact to Order</button>
+            </div>
+
+            <div class="product">
+                <img src="images/bunny-overalls.jpg" alt="Bunny in Overalls Plushie">
+                <h3>Bunny in Overalls</h3>
+                <p>£28 – Removable Clothes</p>
+                <button onclick="contactOrder('Bunny in Overalls')">Contact to Order</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About KingsKrochet</h2>
+        <p>
+            Royal Stitches by KingsKrochet is a boutique crochet brand dedicated to creating exclusive, handcrafted plushies.  
+            Each piece is thoughtfully designed, carefully stitched, and finished with fine details to bring joy and charm to collectors and gift-givers alike.  
+            Our mission is to combine creativity and quality in every stitch.
+
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Royal Stitches by KingsKrochet | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

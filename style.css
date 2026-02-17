@@ -1,0 +1,170 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5ff;
+    color: #333;
+}
+
+a { text-decoration: none; }
+
+/* HEADER */
+/* FANCY FONT */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+/* GOLD RIBBON EFFECT */
+.ribbon {
+    background: linear-gradient(135deg, #ffd700, #ffec8b);
+    padding: 20px 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-bottom: 3px solid #daa520;
+    position: relative;
+    text-align: center;
+}
+
+/* Ribbon corners (triangles) */
+.ribbon::before,
+.ribbon::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: #daa520 transparent transparent transparent;
+}
+
+.ribbon::before { left: 0; }
+.ribbon::after { right: 0; }
+
+/* NAVIGATION UNDER RIBBON */
+header nav {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: gold;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    color: gold;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover { text-decoration: underline; }
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #6a0dad, #4b0082);
+    color: white;
+}
+
+.hero button {
+    background-color: gold;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hero button:hover { background-color: #ffd700; }
+
+/* SECTIONS */
+section { padding: 50px 20px; text-align: center; }
+
+/* PRODUCTS */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover { transform: scale(1.05); }
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product h3 { margin: 5px 0; color: #4b0082; }
+
+.product p { font-weight: bold; color: #ff6347; }
+
+.product button {
+    background-color: #4b0082;
+    color: gold;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.product button:hover { background-color: #6a0dad; }
+
+/* CONTACT FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #4b0082;
+    color: gold;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form button:hover { background-color: #6a0dad; }
+
+/* FOOTER */
+footer {
+    background-color: #4b0082;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
