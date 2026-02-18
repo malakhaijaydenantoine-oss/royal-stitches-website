@@ -4,98 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Stitches by KingsKrochet</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff8f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #6b2d5c;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #6b2d5c;
+            margin-bottom: 20px;
+        }
+
+        .product-card {
+            background: #fff3e6;
+            border: 2px solid #f0c6d0;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0 5px;
+            color: #6b2d5c;
+        }
+
+        .product-card p {
+            margin: 5px 0;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            background-color: #ffb347;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .product-card button:hover {
+            transform: scale(1.05);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        button[type="submit"] {
+            background-color: #6b2d5c;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            border: none;
+            padding: 12px;
+            transition: transform 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            transform: scale(1.05);
+        }
+
+        @media (min-width: 600px) {
+            .product-card {
+                display: inline-block;
+                width: 45%;
+                margin: 10px 2%;
+                vertical-align: top;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-    <div class="ribbon">
-        <h1>👑 Royal Stitches by KingsKrochet</h1>
-    </div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<header>
+    <h1>Royal Stitches by KingsKrochet</h1>
 </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <h2>Handcrafted Plushies Fit for Royalty</h2>
-        <p>Unique, handmade crochet plushies designed with love and personality.</p>
-        <button onclick="scrollToProducts()">Shop Now</button>
-    </section>
+<section id="products">
+    <h2>Our Handmade Plushies</h2>
 
-    <!-- PRODUCTS -->
-    <section id="products">
-        <h2>Our Collection</h2>
-        <div class="product-grid">
+    <div class="product-card">
+        <img src="images/strawberry-cow.jpg" alt="Strawberry Cow Plushie">
+        <h3>Strawberry Cow</h3>
+        <p>Sweet, collectible plushie with signature strawberry charm. Soft, medium-sized, perfect for display or gifting. Handmade, limited edition.</p>
+        <p><strong>£22</strong></p>
+        <button onclick="contactOrder('Strawberry Cow')">Contact to Order</button>
+    </div>
 
-            <div class="product">
-                <img src="images/strawberry-cow.jpg" alt="Strawberry Cow Plushie">
-                <h3>Strawberry Cow</h3>
-                <p>£25</p>
-                <button onclick="contactOrder('Strawberry Cow')">Contact to Order</button>
-            </div>
+    <div class="product-card">
+        <img src="images/bunny-bee.jpg" alt="Bunny in Bee Outfit Plushie">
+        <h3>Bunny in Bee Outfit</h3>
+        <p>Adorable bunny with removable bee shirt and bow ribbons. Thin bee ribbon choker included. Fully customizable and collectible.</p>
+        <p><strong>£23</strong></p>
+        <button onclick="contactOrder('Bunny in Bee Outfit')">Contact to Order</button>
+    </div>
 
-            <div class="product">
-                <img src="images/cookies-icecream-cow.jpg" alt="Cookies and Ice Cream Cow Plushie">
-                <h3>Cookies & Ice Cream Cow</h3>
-                <p>£30 (Half Finished)</p>
-                <button onclick="contactOrder('Cookies & Ice Cream Cow')">Contact to Order</button>
-            </div>
+    <div class="product-card">
+        <img src="images/mushroom-boi.jpg" alt="Chunky Mushroom Boi Plushie">
+        <h3>Chunky Grey & Blue Mushroom Boi</h3>
+        <p>Soft, chunky mushroom-inspired plushie with whimsical personality. Ideal as a display piece or companion. Limited edition.</p>
+        <p><strong>£28</strong></p>
+        <button onclick="contactOrder('Chunky Mushroom Boi')">Contact to Order</button>
+    </div>
 
-            <div class="product">
-                <img src="images/bunny-bee.jpg" alt="Bunny in Bee Outfit Plushie">
-                <h3>Bunny in Bee Outfit</h3>
-                <p>£28 – Removable Clothes, Customizable</p>
-                <button onclick="contactOrder('Bunny in Bee Outfit')">Contact to Order</button>
-            </div>
+    <div class="product-card">
+        <img src="images/bunny-overalls.jpg" alt="Bunny in Overalls Plushie">
+        <h3>Bunny in Overalls</h3>
+        <p>Cute bunny in removable overalls and hat. Perfect for collectors or as a thoughtful gift. Handcrafted with care.</p>
+        <p><strong>£23</strong></p>
+        <button onclick="contactOrder('Bunny in Overalls')">Contact to Order</button>
+    </div>
 
-            <div class="product">
-                <img src="images/mushroom-boi.jpg" alt="Chunky Grey and Blue Mushroom Plushie">
-                <h3>Chunky Mushroom Boi</h3>
-                <p>£32</p>
-                <button onclick="contactOrder('Chunky Mushroom Boi')">Contact to Order</button>
-            </div>
+</section>
 
-            <div class="product">
-                <img src="images/bunny-overalls.jpg" alt="Bunny in Overalls Plushie">
-                <h3>Bunny in Overalls</h3>
-                <p>£28 – Removable Clothes</p>
-                <button onclick="contactOrder('Bunny in Overalls')">Contact to Order</button>
-            </div>
+<section id="contact">
+    <h2>Contact to Order</h2>
+    <form action="https://formspree.io/f/mpqjrgae" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
-        </div>
-    </section>
+<script>
+function contactOrder(plushieName) {
+    const messageField = document.querySelector('textarea[name="message"]');
+    messageField.value = `Hi! I’m interested in ordering: ${plushieName}. Please let me know availability and payment details.`;
+    messageField.focus();
+    window.location.href = "#contact";
+}
+</script>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About KingsKrochet</h2>
-        <p>
-            Royal Stitches by KingsKrochet is a boutique crochet brand dedicated to creating exclusive, handcrafted plushies.  
-            Each piece is thoughtfully designed, carefully stitched, and finished with fine details to bring joy and charm to collectors and gift-givers alike.  
-            Our mission is to combine creativity and quality in every stitch.
+</body>
+</html>
 
-        </p>
-    </section>
-
-    <!-- CONTACT -->
-   <form action="https://formspree.io/f/mpqjrgae" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
-</form>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Royal Stitches by KingsKrochet | All Rights Reserved</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
